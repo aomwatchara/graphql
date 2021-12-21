@@ -2,11 +2,20 @@ import { ApolloServer, gql } from 'apollo-server';
 
 
 //schema
-
+const typeDefs = gql`
+    type Query {
+        hello: String
+`;
 
 
 //resolver
-
+const resolvers = {
+    Query:{
+        hello: (parent, args, context, info) => {
+            return "world";
+        },
+    }
+};
 
 //function apollo-server
 const startApolloServer = async (typeDefs, resolvers) =>{
