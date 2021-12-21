@@ -2,7 +2,6 @@ version: '3'
 
 services:
   apiserver:
-    apiserver:
       image: aom/ass_graphql
       volumes:
        - ./server:/data

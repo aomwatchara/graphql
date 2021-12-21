@@ -5,6 +5,14 @@ import { ApolloServer, gql } from 'apollo-server';
 const typeDefs = gql`
     type Query {
         hello: String
+        hi: String
+        users: [User]
+        user(name: String): User
+    }
+    type User {
+        name: String
+        sex: String
+    }
 `;
 
 
@@ -13,6 +21,15 @@ const resolvers = {
     Query:{
         hello: (parent, args, context, info) => {
             return "world";
+        },
+        hi: (parent, args, context, info) => {
+            return "62021236";
+        },
+        users: (parent, args, context, info ) => {
+            return users;
+        },
+        user: (parent, args, context, info ) => {
+            return users.find( user => user.name === args.name);
         },
     }
 };
