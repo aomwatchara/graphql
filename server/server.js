@@ -6,6 +6,7 @@ const users =[
     { name: "pond", sex: "M",id:"62020909"},
     { name: "Tonkla", sex: "M",id"62022877"},
     { name: "Nay", sex: "M",id"62021078"},
+    { name: "Sek", sex: "M",id"62022899"},
 ];
 
 //schema
